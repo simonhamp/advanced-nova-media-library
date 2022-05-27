@@ -179,8 +179,8 @@ Images::make('Image 1', 'img1')
 ![Cropping](https://raw.githubusercontent.com/ebess/advanced-nova-media-library/master/docs/cropping.gif)
 
 By default you are able to crop / rotate images by clicking the scissors in the left bottom corner on the edit view. 
-The [vue-js-clipper](https://github.com/timtnleeProject/vuejs-clipper) is used for this purpose. The cropping feature is 
-limited to mime type of `image/jpg`, `image/jpeg` and `image/png`.
+This package uses [Vue Advanced Cropper](https://norserium.github.io/vue-advanced-cropper/) for image cropping.
+The cropping feature is limited to files with a MIME type of `image/jpg`, `image/jpeg` or `image/png`.
 
 **Important:** By cropping an existing image the original media model is deleted and replaced by the cropped image. 
 All custom properties are copied form the old to the new model.
@@ -194,7 +194,7 @@ You can set all configurations like ratio e.g. as following:
 ```php
 Images::make('Gallery')->croppingConfigs(['ratio' => 4/3]);
 ```
-Available cropping configuration, see https://github.com/timtnleeProject/vuejs-clipper#clipper-basic.
+[See all of the available cropping configuration options here](https://norserium.github.io/vue-advanced-cropper/components/rectangle-stencil.html#props)
 
 It is possible to enforce cropping on upload, for example to ensure the image has the set aspect ratio:
 ```php
